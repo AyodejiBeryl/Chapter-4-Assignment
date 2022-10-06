@@ -1,8 +1,8 @@
 # Chapter-4-Assignment
 
-What Linear Regression training algorithm can you use if you have a training set with millions of features?
+1. What Linear Regression training algorithm can you use if you have a training set with millions of features?
 The Linear Regression training algorithms that can be used are stochastic gradient descent, mini-batch gradient descent, or batch gradient descent. Stochastic gradient descent and mini-batch gradient descent would be more preferable because both of them do not have to load the the entire dataset into memory in order to take one step of gradient descent. Batch gradient descent would be good to use if there is enough memory to load all the data. Normal equations are not efficient computatuionally. 
-Suppose the features in your training set have very different scales. What algorithms might suffer from this, and how? What can you do about it?
+2. Suppose the features in your training set have very different scales. What algorithms might suffer from this, and how? What can you do about it?
 There is a need to do feature scaling for the different gradient descent algorithms, it will help data converge quicker. The normal equations method do not require normalizing features, it remains unaffected by features in the training set having very different scales. 
 Can Gradient Descent get stuck in a local minimum when training a Logistic Regression model?
 Gradient Descent produces a convex shaped graph which only has one global optimum, so it cannot get stuck in a local minimum.
