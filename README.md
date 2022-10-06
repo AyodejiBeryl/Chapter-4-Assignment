@@ -18,11 +18,11 @@ Stochastic Gradient Descent has the fastest training iteration since it consider
 If the validation error is much higher then the training error, then this is likely because the model is overfitting the training set. To fix this one way will be to reduce the polynomial degree: a model with fewer degrees of randomness is less likely to overfit. Secondly, you can regularize the model – for example, by adding a L_2 penalty (Ridge regression) or an L_1 penalty (Lasso) to the cost function. This will also reduce the degrees of freedom of the model. Thirdly, you can try to increase the size of the training set.
 9. Suppose you are using Ridge Regression and you notice that the training error and the validation error are almost equal and fairly high. Would you say that the model suffers from high bias or high variance? Should you increase the regularization hyperparameter α or reduce it?
 If both the training error and the validation error are almost equal and fairly high, the model is likely underfitting the training set, which means it has a high bias. You should try reducing the regularization hyperparameter.
-10a. Why would you want to use Ridge Regression instead of Linear Regression?
+10. Why would you want to use Ridge Regression instead of Linear Regression?
 I would Ridge regression when my model is overfitting the training set. A model with some regularization typically performs better than a model without any regularization, so I would prefer to use Ridge Regression over plain Linear Regression
-10b. Why would you want to use Lasso instead of Ridge Regression?
+11. Why would you want to use Lasso instead of Ridge Regression?
 Lasso performs automatic feature selection by dropping weights of the most important features. Concretely, Lasso regression uses an l1 penalty which tends to push the weights down to exactly zero. This leads to sparse models, where all weights are zero except for the most important weights. This is a way to perform feature selection automatically, which is good if only few features actually matter. When I am not sure, I would go with Ridge regression.
-10c. Why would you want to use Elastic Net instead of Lasso?
+12. Why would you want to use Elastic Net instead of Lasso?
 Elastic Net is preferred over Lasso since Lasso may behave erratically when the number of features is greater than the number of training instances or when several features are strongly correlated
-11. Suppose you want to classify pictures as outdoor/indoor and daytime/nighttime. Should you implement two Logistic Regression classifiers or one Softmax Regression classifier?
+13. Suppose you want to classify pictures as outdoor/indoor and daytime/nighttime. Should you implement two Logistic Regression classifiers or one Softmax Regression classifier?
 If you want to classify pictures as outdoor/indoor and daytime/nighttime, since these are not exclusive classes (i.e., all four combinations are possible) you should train two Logistic Regression classifiers.
